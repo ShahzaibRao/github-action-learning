@@ -1,0 +1,35 @@
+name: simple workflow 
+
+on: 
+    workflow_dispatch:
+    inputs:
+        name:
+            description: 'person to greet'
+            default: 'shahziab'
+            required: ture
+            type: string
+        city:
+            description: 'favrite city'
+            required: ture
+            deafault: 'multan'
+            type: choice
+            options:
+                - multan
+                - karachi
+                - lahore
+
+        are-you-from-pk:
+            description: "are you from pakistan"
+            required: true
+            type: boolean
+            
+jobs:
+    greet:
+        runs-on:
+            - ubuntu-latest
+        steps:
+            - name: sne greets
+              run:
+                echo "Hello ${{ github.event.inputs.name }}"
+                echo "Your favrat city is ${{ github.event.inputs.city }}"
+                echo "Are you from ${{ github.event.inputs.are-you-from-pk }}"
