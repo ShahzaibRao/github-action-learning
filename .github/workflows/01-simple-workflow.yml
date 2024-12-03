@@ -31,5 +31,5 @@ jobs:
             - name: sne greets
               run:
                 echo "Hello ${{ github.event.inputs.name }}"
-                pwd
-                cat /etc/passwd
+                echo "${{ github.event.inputs.name }} are you from ${{ github.event.inputs.city }}"
+                echo "your contry is Pakistan ${{ github.event.inputs.are-you-from-pk }}"
