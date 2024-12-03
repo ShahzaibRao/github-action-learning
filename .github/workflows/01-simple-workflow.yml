@@ -28,8 +28,8 @@ jobs:
         runs-on:
             - ubuntu-latest
         steps:
-            - name: sne greets
-              run:
+            - name: send greets
+              run: |
                 echo "Hello ${{ github.event.inputs.name }}"
                 echo "${{ github.event.inputs.name }} are you from ${{ github.event.inputs.city }}"
                 echo "your contry is Pakistan ${{ github.event.inputs.are-you-from-pk }}"
