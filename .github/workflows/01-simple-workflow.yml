@@ -31,5 +31,3 @@ jobs:
             - name: sne greets
               run:
                 echo "Hello ${{ github.event.inputs.name }}"
-                echo "Your favrat city is ${{ github.event.inputs.city }}"
-                echo "Are you from ${{ github.event.inputs. }}"
